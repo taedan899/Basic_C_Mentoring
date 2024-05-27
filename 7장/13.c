@@ -22,7 +22,7 @@ int main()
 	sum = sum - i;
 	i = i - 1;
 	
-	printf("1ºÎÅÍ %d±îÁöÀÇ ÇÕÀº %dÀÔ´Ï´Ù.", i, sum);
+	printf("1ë¶€í„° %dê¹Œì§€ì˜ í•©ì´ %dì…ë‹ˆë‹¤.", i, sum);
 
 	return 0;
 
