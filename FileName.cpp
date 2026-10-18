@@ -1,52 +1,36 @@
 #include <stdio.h>
 
-int baesu(int n, int x);
-
 int main()
 {
-	int x, n,result;
-	printf("n과x를 순서대로 입력하시오 : ");
-	scanf_s("%d %d",&n,&x);
-	
-	x = x / n * n;
+	int arr[] = { 1,9,2,8,3,7,4,5, };
+
+	int size = sizeof(arr) / sizeof(arr[0]);
+
+	int temp;
+
+	for (int i = 0; i < size - 1; i++)
+	{
+		for (int j = 0; j < size - 1; j++)
+		{	
+			if (arr[j] > arr[j + 1])
+			{
+				temp = arr[j + 1];
+				arr[j + 1] = arr[j];
+				arr[j] = temp;
+			}
 
 
-	result = baesu(n,x);
-	printf("1~%d까지 %d의 배수의 합 = %d", x, n, result);
+		}
 
+	}
 
+	for (int k = 0; k < size; k++)
+	{
+		printf("%d ", arr[k]);
+	}
 
-}
+	return 0;
 
-
-int baesu(int n, int x)
-{	
-
-	if (x == n)
-		printf(" %d   ",x);
-	else if(x > n)
-		printf(" %d +", x);
-
-	if (x < n)
-		return 0;
-	else
-		return x + baesu(n, x - n);
-
-
-}
-
-int yaksu(int n, int x)
-{
-
-	if (x == n)
-		printf(" %d   ", x);
-	else if (x > n)
-		printf(" %d +", x);
-
-	if (x < n)
-		return 0;
-	else
-		return x + baesu(n, x - n);
 
 
 }
